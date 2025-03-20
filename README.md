@@ -1,4 +1,9 @@
-# Shadows of the Crown
+<p align="center">
+  <a href="https://github.com/skipdudes/AdventureGame/releases">
+    <img src="logo.png" alt="Shadows of the Crown" />
+  </a>
+<p>
+
 **Shadows of the Crown** is a 2D RPG set in the medieval era. You take on the role of a Royal Guard, entrusted by the King with the mission of finding those responsible for the murder of a high-ranking nobleman at the royal court. As you conduct your investigation, you uncover that the crime was a carefully orchestrated act by an organized group, and shadows are gathering over the entire kingdom...
 
 ## Technologies used
