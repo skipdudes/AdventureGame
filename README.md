@@ -19,9 +19,6 @@ todo
 todo
 ```
 
-## Game assets
-[Page with assets](https://groovy-mandolin-a1d.notion.site/Game-Assets-fa82ae12a3944086bde1c9e4f678e263)
-
 ## License
 Project is licensed under the [MIT](LICENSE) license.
 
