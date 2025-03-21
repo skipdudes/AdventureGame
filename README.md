@@ -20,10 +20,10 @@ todo
 ```
 
 ## License
-Project is licensed under the [MIT](LICENSE) license.
+Project is licensed under the [GNU General Public License v3.0](LICENSE) license.
 
 ## Credits
 Todo
 
 ## Authors
-Copyright &copy; 2024 Marcin Chętnik, Andrzej Woroniecki, Marta Makowska
+Copyright &copy; 2024 Marcin (skipdudes) Chętnik, Andrzej (Teomantopxd) Woroniecki, Marta (martamako) Makowska
