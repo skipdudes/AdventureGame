@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/skipdudes/AdventureGame/releases">
+  <a href="https://github.com/skipdudes/AdventureGame">
     <img src="logo.png" alt="Shadows of the Crown" />
   </a>
 <p>
