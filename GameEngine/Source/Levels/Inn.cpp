@@ -14,10 +14,10 @@ Inn::Inn()
 	mTriggerOverworld = { 432, 718, 96, 2 };
 
 	//Walls
-	mWalls.push_back(SDL_Rect{ 0, 48, 48, 624 }); //left
-	mWalls.push_back(SDL_Rect{ 912, 48, 48, 624 }); //right
-	mWalls.push_back(SDL_Rect{ 0, 672, 432, 48 }); //bottom left
-	mWalls.push_back(SDL_Rect{ 528, 672, 432, 48 }); //bottom right
+	mWalls.push_back(SDL_Rect{ 0, 48, 48, 624 }); //Left
+	mWalls.push_back(SDL_Rect{ 912, 48, 48, 624 }); //Right
+	mWalls.push_back(SDL_Rect{ 0, 672, 432, 48 }); //Bottom left
+	mWalls.push_back(SDL_Rect{ 528, 672, 432, 48 }); //Bottom right
 
 	//Bar
 	mWalls.push_back(SDL_Rect{ 48, 0, 432, 336 });

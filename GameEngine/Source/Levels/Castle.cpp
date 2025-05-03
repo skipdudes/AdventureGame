@@ -15,10 +15,10 @@ Castle::Castle()
 	mTriggerOverworld = { 360, 718, 240, 2 };
 
 	//Castle walls
-	mWalls.push_back(SDL_Rect{ 0, 48, 24, 624 }); //left
-	mWalls.push_back(SDL_Rect{ 936, 48, 24, 624 }); //right
-	mWalls.push_back(SDL_Rect{ 0, 672, 360, 48 }); //bottom left
-	mWalls.push_back(SDL_Rect{ 600, 672, 360, 48 }); //bottom right
+	mWalls.push_back(SDL_Rect{ 0, 48, 24, 624 }); //Left
+	mWalls.push_back(SDL_Rect{ 936, 48, 24, 624 }); //Right
+	mWalls.push_back(SDL_Rect{ 0, 672, 360, 48 }); //Bottom left
+	mWalls.push_back(SDL_Rect{ 600, 672, 360, 48 }); //Bottom right
 
 	//Furniture
 	mWalls.push_back(SDL_Rect{ 143, 0, 96, 48 });
@@ -39,7 +39,7 @@ Castle* Castle::get()
 
 bool Castle::enter()
 {
-	//If player just finished marquis quest and still haven't been to castle
+	//If the player has just finished The Marquis quest and still hasn't been to The Castle
 	if (g_RDF_marquisToldAboutWoman == true && g_additional_playerEnteredCastle == false)
 	{
 		g_additional_playerEnteredCastle = true;
@@ -57,7 +57,7 @@ bool Castle::enter()
 	mNPCs.push_back(gKing);
 	mNPCs.push_back(gFather);
 
-	//Only if before the 3rd quest and not been to the castle
+	//Only if before the 3rd quest and not been to The Castle
 	if (!(g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle))
 		mNPCs.push_back(gRoyalGuard);
 
@@ -75,7 +75,7 @@ bool Castle::enter()
 	gKing->setPosition((LEVEL_WIDTH - gKing->getWidth()) / 2, 179);
 	gFather->setPosition((LEVEL_WIDTH - gFather->getWidth()) / 3, (LEVEL_HEIGHT - gFather->getHeight()) / 2);
 
-	//Only if before the 3rd quest and not been to the castle
+	//Only if before the 3rd quest and not been to The Castle
 	if (!(g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle))
 		gRoyalGuard->setPosition(2 * (LEVEL_WIDTH - gRoyalGuard->getWidth()) / 3, (LEVEL_HEIGHT - gRoyalGuard->getHeight()) / 2);
 
@@ -84,7 +84,7 @@ bool Castle::enter()
 		mWalls.push_back(npc->getCollider());
 
 	//Player starting position
-	//Came from Overworld
+	//Came from The Overworld
 	if (gCurrentLevel == Overworld::get())
 	{
 		gPlayer->setPosition((LEVEL_WIDTH - Player::PLAYER_WIDTH) / 2, (LEVEL_HEIGHT - Player::PLAYER_HEIGHT) - 4);
@@ -178,7 +178,7 @@ void Castle::update()
 	//Enter overworld
 	if (checkCollision(gPlayer->getCollider(), mTriggerOverworld))
 	{
-		//CHECK FOR ENDING
+		//Check for ending
 		if (g_final_playerSidedWithKing)
 			setNextState(Outro::get());
 		else
@@ -221,7 +221,7 @@ void Castle::render()
 	gKing->renderDialoguePrompt(127);
 	gFather->renderDialoguePrompt(113);
 
-	//Only if before the 3rd quest and not been to the castle
+	//Only if before the 3rd quest and not been to The Castle
 	if (!(g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle))
 		gRoyalGuard->renderDialoguePrompt(110);
 		

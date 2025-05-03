@@ -39,7 +39,6 @@ extern bool g_RDF_fatherToldAboutWoman;
 extern bool g_RDF_isGuardConvinced;
 extern bool g_RDF_marquisToldAboutInnkeeper;
 extern bool g_RDF_innkeeperToldAboutRebels;
-extern bool g_RDF_joinedTheRebellion;
 
 extern bool g_additional_playerEnteredMarquisHouse;
 extern bool g_additional_playerLeftInnAfterQuestSeven;

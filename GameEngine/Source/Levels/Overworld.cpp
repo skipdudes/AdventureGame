@@ -43,7 +43,7 @@ Overworld* Overworld::get()
 
 bool Overworld::enter()
 {
-	//If player just finished second innkeeper quest (quest 7) and still haven't left the Inn
+	//If the player has just finished the second Innkeeper quest (quest 7) and still hasn't left The Inn
 	if (g_RDF_innkeeperToldAboutRebels == true && g_additional_playerLeftInnAfterQuestSeven == false)
 	{
 		g_additional_playerLeftInnAfterQuestSeven = true;
@@ -61,11 +61,11 @@ bool Overworld::enter()
 	}
 
 	//NPCs
-	//Only if after the 3rd quest and been to the castle
+	//Only if after the 3rd quest and been to The Castle
 	if (g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle)
 		mNPCs.push_back(gRoyalGuard);
 
-	//Only after the 7th quest and returned from the Inn already
+	//Only after the 7th quest and returned from The Inn already
 	if (g_RDF_innkeeperToldAboutRebels == true && g_additional_playerLeftInnAfterQuestSeven == true)
 		mNPCs.push_back(gInnkeeper);
 
@@ -80,10 +80,10 @@ bool Overworld::enter()
 	}
 
 	//Individual NPCs position
-	//Only if after the 3rd quest and been to the castle
+	//Only if after the 3rd quest and been to The Castle
 	if (g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle)
 		gRoyalGuard->setPosition(918, 851);
-	//Only after the 7th quest and returned from the Inn already
+	//Only after the 7th quest and returned from The Inn already
 	if (g_RDF_innkeeperToldAboutRebels == true && g_additional_playerLeftInnAfterQuestSeven == true)
 		gInnkeeper->setPosition(1063, 229);
 
@@ -261,11 +261,11 @@ void Overworld::render()
 	gPlayer->render(camera);
 
 	//Specific NPCs prompts
-	//Only if after the 3rd quest and been to the castle
+	//Only if after the 3rd quest and been to The Castle
 	if (g_RDF_marquisToldAboutWoman && g_additional_playerEnteredCastle)
 		gRoyalGuard->renderDialoguePrompt(110);
 
-	//Only after the 7th quest and returned from the Inn already
+	//Only after the 7th quest and returned from The Inn already
 	if (g_RDF_innkeeperToldAboutRebels == true && g_additional_playerLeftInnAfterQuestSeven == true)
 		gInnkeeper->renderDialoguePrompt(98);
 
