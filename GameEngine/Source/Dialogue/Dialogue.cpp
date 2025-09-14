@@ -96,13 +96,6 @@ void Dialogue::changeToNPCTurn()
 	mCurrentLine = mNPC->getName() + " is thinking";
 	mLastRenderUpateTime = SDL_GetTicks();
 
-
-
-	// ******************* TODO ********************
-	//std::string gameEvents = rdfBoolsToString()
-
-
-	//std::string context = mNPC->getContext() + STRING_RDF_BASE_CONTEXT + rdfBoolsToString() + STRING_NPC_BASE_CONTEXT;
 	std::string context = STRING_RDF_BASE_CONTEXT + mNPC->getContext() + mNPC->mRDFDynamicContext + STRING_LANGUAGE_MODEL_INSTRUCTIONS;
 
 	//Begin generating response
@@ -169,7 +162,6 @@ void Dialogue::update()
 			LOG_INFO("Trust: " + std::to_string(mNPC->mTrust));
 			LOG_INFO("Hostility: " + std::to_string(mNPC->mHostility));
 
-			//TODO *************************************************************************
 			updateBools(mNPC);
 
 			//Not thinking anymore

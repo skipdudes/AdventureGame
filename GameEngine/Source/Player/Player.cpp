@@ -158,7 +158,7 @@ void Player::move(int levelWidth, int levelHeight, const std::vector<SDL_Rect>& 
 
 	//Move in Y axis
 	mCollider.y += mVelocityY;
-	// Sprawdzenie kolizji w pionie (Y) ze œcianami lub krawêdziami poziomu
+	//Checking collision vertically (Y) with walls or edges of the level
 	if (mCollider.y < 0 || mCollider.y + PLAYER_HEIGHT > levelHeight || checkWallCollision(walls))
 		mCollider.y = lastY;
 

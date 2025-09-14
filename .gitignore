@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 # PyCharm
 .idea
+
+# Groq Api Key
+.env

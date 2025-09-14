@@ -73,7 +73,6 @@ const std::string STRING_RDF_BASE_CONTEXT =
 " The Innkeeper lives in the Inn."
 " The Inn is located west to the castle and north to Marquis' house. It's made of wood. "
 " The Marquis lives in his house. The house is located south to the castle and it's made of brick. ";
-//todo: ******************************************* Complete RDF information *******************************************
 
 
 

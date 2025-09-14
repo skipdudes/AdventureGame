@@ -31,7 +31,6 @@ bool g_RDF_fatherToldAboutWoman = false;
 bool g_RDF_isGuardConvinced = false;
 bool g_RDF_marquisToldAboutInnkeeper = false;
 bool g_RDF_innkeeperToldAboutRebels = false;
-bool g_RDF_joinedTheRebellion = false;
 
 bool g_additional_playerEnteredMarquisHouse = false;
 bool g_additional_playerEnteredCastle = false;

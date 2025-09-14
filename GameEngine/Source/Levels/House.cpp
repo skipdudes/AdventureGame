@@ -14,15 +14,15 @@ House::House()
 	mTriggerOverworld = { 432, 718, 96, 2 };
 
 	//Walls
-	mWalls.push_back(SDL_Rect{ 0, 48, 48, 624 }); //left
-	mWalls.push_back(SDL_Rect{ 912, 48, 48, 624 }); //right
-	mWalls.push_back(SDL_Rect{ 0, 672, 432, 48 }); //bottom left
-	mWalls.push_back(SDL_Rect{ 528, 672, 432, 48 }); //bottom right
+	mWalls.push_back(SDL_Rect{ 0, 48, 48, 624 }); //Left
+	mWalls.push_back(SDL_Rect{ 912, 48, 48, 624 }); //Right
+	mWalls.push_back(SDL_Rect{ 0, 672, 432, 48 }); //Bottom left
+	mWalls.push_back(SDL_Rect{ 528, 672, 432, 48 }); //Bottom right
 
 	//Top furniture
 	mWalls.push_back(SDL_Rect{ 144, 0, 48, 48 });
 	mWalls.push_back(SDL_Rect{ 240, 0, 48, 48 });
-	mWalls.push_back(SDL_Rect{ 499, 0, 106, 48 }); //fireplace
+	mWalls.push_back(SDL_Rect{ 499, 0, 106, 48 }); //Fireplace
 	mWalls.push_back(SDL_Rect{ 672, 0, 48, 48 });
 	mWalls.push_back(SDL_Rect{ 768, 0, 48, 48 });
 
@@ -31,7 +31,7 @@ House::House()
 
 	//Desk
 	mWalls.push_back(SDL_Rect{ 672, 192, 96, 2 });
-	mWalls.push_back(SDL_Rect{ 703, 158, 34, 34 }); //armchair
+	mWalls.push_back(SDL_Rect{ 703, 158, 34, 34 }); //Armchair
 
 	//Right furniture
 	mWalls.push_back(SDL_Rect{ 876, 96, 36, 96 });
@@ -47,7 +47,7 @@ House* House::get()
 
 bool House::enter()
 {
-	//If player just finished innkeeper quest and still haven't been to Marquis' house
+	//If the player has just finished The Innkeeper quest and still hasn't been to The Marquis' house
 	if (g_RDF_innkeeperToldAboutWoman == true && g_additional_playerEnteredMarquisHouse == false) 
 	{
 		g_additional_playerEnteredMarquisHouse = true;

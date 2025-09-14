@@ -2,34 +2,28 @@
 #include "Logger.h"
 #include <httplib.h>
 
-std::string sendPrompt(const nlohmann::json& messages) {
+std::string sendPrompt(const nlohmann::json& messages)
+{
     httplib::Client cli("http://localhost:8000");
-
-
-    nlohmann::json requestData = {
-        {"messages", messages}
-    };
-
+    nlohmann::json requestData = { {"messages", messages} };
 
     auto res = cli.Post("/generate/", requestData.dump(), "application/json");
-
     if (res && res->status == 200)
         return res->body;
     else 
         std::cerr << "Error: " << (res ? std::to_string(res->status) : "Connection failed") << std::endl;
     
-
     //warning C4715: 'sendPrompt': not all control paths return a value
     return "";
 }
 
-
-std::string generateMessage(nlohmann::json& messages, std::string base_context, float& happiness, float& trust, float& hostility, std::string prompt) {
+std::string generateMessage(nlohmann::json& messages, std::string base_context, float& happiness, float& trust, float& hostility, std::string prompt)
+{
     std::string context = base_context + paramsToString(happiness, trust, hostility);
     std::string response;
     std::string originalResponse;
 
-    //if it's a first message and messages array is empty - then push system message, else - overwrite it 
+    //If it's a first message and messages array is empty - then push system message, else - overwrite it 
     if (messages.empty()) 
         pushSystemMessage(messages, context); 
     else if (messages[0]["role"] == "system")
@@ -54,14 +48,14 @@ std::string generateMessage(nlohmann::json& messages, std::string base_context, 
         originalResponse = response;
     } while (!updateParametersFromResponse(response, happiness, trust, hostility));
 
-
     //Push model's response if valid
     pushAssistantMessage(messages, originalResponse);
     
     return response;
 }
 
-bool updateParametersFromResponse(std::string& response, float& npc_happiness, float& npc_trust, float& npc_hostility) {
+bool updateParametersFromResponse(std::string& response, float& npc_happiness, float& npc_trust, float& npc_hostility)
+{
     std::regex pattern(R"(\b(Happiness|Trust|Hostility):\s*([0-9]*\.?[0-9]+))");
     std::smatch match;
 
@@ -96,7 +90,6 @@ bool updateParametersFromResponse(std::string& response, float& npc_happiness, f
     //Log full message with stats
     LOG_INFO("Generated response: " + response);
 
-
     //Stats
     std::regex params_pattern(R"(\s*\(Happiness:\s*[0-9]*\.?[0-9]+,\s*Trust:\s*[0-9]*\.?[0-9]+,\s*Hostility:\s*[0-9]*\.?[0-9]+\)\s*)");
     response = std::regex_replace(response, params_pattern, "");
@@ -108,7 +101,8 @@ bool updateParametersFromResponse(std::string& response, float& npc_happiness, f
     return true;
 }
 
-void pushSystemMessage(nlohmann::json& messages, std::string msg) {
+void pushSystemMessage(nlohmann::json& messages, std::string msg)
+{
     nlohmann::json systemMessage = {
         {"role", "system"},
         {"content", msg}
@@ -117,7 +111,8 @@ void pushSystemMessage(nlohmann::json& messages, std::string msg) {
     messages.push_back(systemMessage);
 }
 
-void pushUserMessage(nlohmann::json& messages, std::string msg) {
+void pushUserMessage(nlohmann::json& messages, std::string msg)
+{
     nlohmann::json systemMessage = {
         {"role", "user"},
         {"content", msg}
@@ -126,7 +121,8 @@ void pushUserMessage(nlohmann::json& messages, std::string msg) {
     messages.push_back(systemMessage);
 }
 
-void pushAssistantMessage(nlohmann::json& messages, std::string msg) {
+void pushAssistantMessage(nlohmann::json& messages, std::string msg)
+{
     nlohmann::json systemMessage = {
         {"role", "assistant"},
         {"content", msg}
@@ -135,7 +131,8 @@ void pushAssistantMessage(nlohmann::json& messages, std::string msg) {
     messages.push_back(systemMessage);
 }
 
-std::string paramsToString(float happiness, float trust, float hostility) {
+std::string paramsToString(float happiness, float trust, float hostility)
+{
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2);
     oss << happiness << ", " << trust << ", " << hostility;

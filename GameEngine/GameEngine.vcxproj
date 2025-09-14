@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Batch.cpp" />
     <ClCompile Include="Source\Dialogue\Dialogue.cpp" />
     <ClCompile Include="Source\Fonts\Font.cpp" />
     <ClCompile Include="Source\Fonts\FontTexture.cpp" />
@@ -43,7 +42,6 @@
     <ClCompile Include="Source\UpdateBools.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Batch.h" />
     <ClInclude Include="Source\Constants.h" />
     <ClInclude Include="Source\Dialogue\Dialogue.h" />
     <ClInclude Include="Source\Fonts\Font.h" />
@@ -123,29 +121,29 @@
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>shadows-crown</TargetName>
-    <IncludePath>C:\vclib\cpp-httplib-0.18.1;C:\vclib\json-3.11.3\single_include;C:\vclib\SDL2_image-2.8.2\include;C:\vclib\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\vclib\SDL2_image-2.8.2\lib\x86;C:\vclib\SDL2-2.30.8\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>Vendor\cpp-httplib-0.18.1;Vendor\json-3.11.3\single_include;Vendor\SDL2_image-2.8.2\include;Vendor\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Vendor\SDL2_image-2.8.2\lib\x86;Vendor\SDL2-2.30.8\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>shadows-crown</TargetName>
-    <IncludePath>C:\vclib\cpp-httplib-0.18.1;C:\vclib\json-3.11.3\single_include;C:\vclib\SDL2_image-2.8.2\include;C:\vclib\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\vclib\SDL2_image-2.8.2\lib\x86;C:\vclib\SDL2-2.30.8\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>Vendor\cpp-httplib-0.18.1;Vendor\json-3.11.3\single_include;Vendor\SDL2_image-2.8.2\include;Vendor\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Vendor\SDL2_image-2.8.2\lib\x86;Vendor\SDL2-2.30.8\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>shadows-crown</TargetName>
-    <IncludePath>C:\vclib\cpp-httplib-0.18.1;C:\vclib\json-3.11.3\single_include;C:\vclib\SDL2_image-2.8.2\include;C:\vclib\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\vclib\SDL2_image-2.8.2\lib\x64;C:\vclib\SDL2-2.30.8\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>Vendor\cpp-httplib-0.18.1;Vendor\json-3.11.3\single_include;Vendor\SDL2_image-2.8.2\include;Vendor\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Vendor\SDL2_image-2.8.2\lib\x64;Vendor\SDL2-2.30.8\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>shadows-crown</TargetName>
-    <IncludePath>C:\vclib\cpp-httplib-0.18.1;C:\vclib\json-3.11.3\single_include;C:\vclib\SDL2_image-2.8.2\include;C:\vclib\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\vclib\SDL2_image-2.8.2\lib\x64;C:\vclib\SDL2-2.30.8\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>Vendor\cpp-httplib-0.18.1;Vendor\json-3.11.3\single_include;Vendor\SDL2_image-2.8.2\include;Vendor\SDL2-2.30.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Vendor\SDL2_image-2.8.2\lib\x64;Vendor\SDL2-2.30.8\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
