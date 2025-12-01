@@ -105,7 +105,7 @@ python server.py
 Run `shadows-crown.exe` from the `bin/<Configuration>/<Platform>/` folder. The game will now be able to communicate with the dialogue server and generate dynamic NPC responses.
 
 ## 📜 License
-This project is licensed under the [GNU General Public License v3.0](LICENSE) license.
+This project is licensed under the [MIT](LICENSE) license.
 
 ## 🎨 Credits
 The game uses fonts from [Nb Pixel Font Bundle](https://nimblebeastscollective.itch.io/nb-pixel-font-bundle) and [Nb Pixel Font Bundle 2](https://nimblebeastscollective.itch.io/nb-pixel-font-bundle-2), created by [Nimble Beasts](https://nimblebeastscollective.itch.io/). Character and level sprites were sourced from [RPG Maker XP](https://www.rpgmakerweb.com/products/rpg-maker-xp).
